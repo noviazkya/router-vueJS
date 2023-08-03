@@ -67,21 +67,21 @@ export const produk = {
         "id": 10,
         "nama": "Sangobion Vita-Tonik",
         "harga": "Rp 25.000,00",
-        "id_kategori" : 4,
+        "id_kategori" : 44,
         "img" : "../img/sangobion.JPEG"
       }, 
       {
         "id": 11,
         "nama": "Vitacimin 500 mg",
         "harga": "Rp 35.000,00",
-        "id_kategori" : 4,
+        "id_kategori" : 44,
         "img" : "../img/vitacimin.JPEG"
       },
       {
         "id": 12,
         "nama": "Greenfields",
         "harga": "Rp 21.000,00",
-        "id_kategori" : 4,
+        "id_kategori" : 44,
         "img" : "../img/greenfields.png"
       }, 
       {

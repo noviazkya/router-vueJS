@@ -7,7 +7,9 @@ import Contact from "@/views/Contact.vue";
 import Produk from "@/views/Produk.vue";
 import Kategori from "@/views/Kategori.vue";
 import Detail from "@/views/Detail.vue";
-import KategoriProduk from "@/views/KategoriProduk.vue"
+import KategoriProduk from "@/views/KategoriProduk.vue";
+
+import Login from "@/views/Login.vue";
 
 const routes = [ 
   {
@@ -26,11 +28,6 @@ const routes = [
     component: Contact,
   },
   {
-    path: "/produk",
-    name: "Produk",
-    component: Produk,
-  },
-  {
     path: "/kategori",
     name: "Kategori",
     component: Kategori,
@@ -47,7 +44,31 @@ const routes = [
     name: "KategoriProduk",
     component: KategoriProduk,
     props: true,
-  }
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    props: true,
+  },
+  {
+    path: "/produk",
+    name: "Produk",
+    component: Produk,
+    beforeEnter: (to, from, next) => {
+      const loggedInUser = true;
+      if (loggedInUser) {
+        next(); // Lanjutkan navigasi ke halaman produk jika sudah login
+      } else {
+        next("/login"); // Alihkan ke halaman login jika belum login
+      }
+    },
+  },
+  {
+    path: "/detail/:id_produk",
+    name: "Detail",
+    props: true,
+  },
 ];
 
 const router = createRouter({

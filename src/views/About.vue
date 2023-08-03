@@ -1,5 +1,5 @@
 <template>
-    <h1>About Page</h1>
+    <h1>About</h1>
   </template>
   <script>
   import { onMounted } from 'vue'

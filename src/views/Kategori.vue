@@ -1,8 +1,8 @@
 <template>
-  <h1>kategori</h1>
+  <h1>Kategori</h1>
   <div class="flex-container">
       <div v-for="kategori in cek" :key="kategori.id" class="card">
-        <img class="img" :src="getImgSrc(kategori.img)" alt="category image"/>
+        <center><img class="img" :src="getImgSrc(kategori.img)" alt="category image"/></center>
       <router-link class="container" :to="{ name : 'KategoriProduk', params:{id_kategori : kategori.id}}">
           <h4>{{ kategori.nama }}</h4>
       </router-link>
@@ -34,6 +34,7 @@ export default{
 </script>
 
 <style scoped>
+
 .img{
   width: 100px;
   margin-top: 50px;

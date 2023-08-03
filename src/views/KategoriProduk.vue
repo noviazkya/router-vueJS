@@ -1,5 +1,9 @@
 <template>
-  <h1>kategori {{ detail.nama }}</h1>
+  <div v-if="data.length == 0">
+    <h1> Produk tidak tersedia </h1>
+  </div>
+  <div v-else>
+  <h1> Kategori {{ detail .nama }}</h1>
   <div class="flex-container">
       <div v-for="produk in data" :key="produk.id" class="card">
         <img class="img" :src="getImgSrc(produk.img)" alt="category image"/>
@@ -7,6 +11,7 @@
           <h4>{{produk.nama }}</h4>
       </router-link>
   </div>
+</div>
   </div>
 </template>
 <script>
