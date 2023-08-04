@@ -8,6 +8,8 @@ import Produk from "@/views/Produk.vue";
 import Kategori from "@/views/Kategori.vue";
 import Detail from "@/views/Detail.vue";
 import KategoriProduk from "@/views/KategoriProduk.vue";
+import Counter from "@/views/Counter.vue";
+import Todo from "@/views/Todo.vue";
 
 import Login from "@/views/Login.vue";
 
@@ -32,6 +34,16 @@ const routes = [
     name: "Kategori",
     component: Kategori,
 
+  },
+  {
+    path: '/',
+    name: 'Counter',
+    component: Counter
+  },
+  {
+    path: '/todo',
+    name: 'Todo',
+    component: Todo
   },
   {
     path: "/detail/:id_produk",

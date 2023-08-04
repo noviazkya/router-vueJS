@@ -2,6 +2,7 @@
   <Navbar :idMenu="idMenu" :key="idMenu"/>
   <router-view :idMenu="setMenu($event)" />
 </template>
+
 <script>
 import Navbar from './components/Navbar.vue';
 import { ref } from 'vue'
@@ -26,6 +27,7 @@ export default{
   }
 }
 </script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
